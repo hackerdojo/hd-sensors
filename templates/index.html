@@ -1,2 +1,13 @@
 
-<H1>Sensors</H1>
+<h1>Sensors</h1>
+
+
+<table border="1">
+
+  <tr><th>Timestamp</th><th>Event</th><th>Zone</th></tr>
+
+  {% for ae in alarmevents %}
+    <tr><td>{{ae.created}} GMT</td><td>{{ae.event}}</td><td>{{ae.zone}}</td></tr>
+  {% endfor %}
+
+</table>
